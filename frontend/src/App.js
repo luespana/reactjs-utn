@@ -13,8 +13,12 @@ import ContactoPages from './pages/ContactoPages'
 import NosotrosPages from './pages/NosotrosPages'
 import ServiciosPages from './pages/ServiciosPages'
 import NovedadesPages from './pages/NovedadesPages'
+import GaleriaPages from './pages/GaleriaPages'
 import Header from './components/layout/Header';
 
+
+//import estilos react boostrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -29,6 +33,7 @@ function App() {
         <Route path='/nosotros' element={<NosotrosPages/>} />
         <Route path='/servicios' element={<ServiciosPages/>} />
         <Route path='/novedades' element={<NovedadesPages/>} />
+        <Route path='/galeria' element={<GaleriaPages/>} />
 
         </Routes>
         <Footer/>

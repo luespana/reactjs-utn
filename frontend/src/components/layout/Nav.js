@@ -4,10 +4,8 @@ import { NavLink } from "react-router-dom";
 
 function NavList() {
   let activeStyle = {
-    textDecoration: "underline",
+    backgroundColor: "rgb(39, 133, 165)",
   };
-
-  let activeClassName = "underline";
 
   return (
     <nav>
@@ -23,20 +21,25 @@ function NavList() {
         <li>
           <NavLink
             to="nosotros"
-            className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            }
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             Nosotros
           </NavLink>
         </li>
         <li>
-          <NavLink to="servicios">
-            {({ isActive }) => (
-              <span className={isActive ? activeClassName : undefined}>
-                Servicios
-              </span>
-            )}
+          <NavLink
+            to="galeria"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Galeria
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="servicios"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Servicios
           </NavLink>
         </li>
         <li>
