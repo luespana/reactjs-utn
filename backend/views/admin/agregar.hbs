@@ -1,0 +1,48 @@
+<div class="container" style="margin:100px auto;">
+  <form action="/admin/novedades/agregar" method="post">
+    <div class="row text-center m-5">
+      <h1 class="col text-center">Agregar novedad</h1>
+      <div class="col text-end">
+        <a class="btn btn-success" href="/admin/novedades">
+        <i class="bi bi-arrow-left-circle"></i>  Volver
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Titulo"
+          name="titulo"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Subtitulo"
+          name="subtitulo"
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <textarea
+          name="cuerpo"
+          rows="5"
+          class="form-control"
+          placeholder="Cuerpo"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row m-4">
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </div>
+  </form>
+  {{#if error}}
+    <div class="alert alert-danger" role="alert">
+      {{message}}
+    </div>
+  {{/if}}
+</div>
